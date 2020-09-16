@@ -1,13 +1,20 @@
-print("Hola, mundo!")
 
-def area_cuadrado(lado = int)->int:
+def area_cuadrado(lado:int)->int:
     return lado * lado
 
-def area_triangulo(base = int, altura = int)->int:
+def area_triangulo(base:float, altura:float)->float:
     return (base*altura)/2
 
-def area_circulo(radio = float)->float:
+def area_circulo(radio:float)->float:
     return (radio*radio)*3.1416
+
+
+print("Area del cuadrado: ", area_cuadrado(int(input("valor del lado: "))))
+
+print("Area del triangulo: ", area_triangulo(float(input("base: ")),float(input("altura:"))))
+
+print("Area del círculo: ", area_circulo(float(input("radio: "))))
+
 
 def signo_zodiacal(dia, mes):
     if mes == "1":
@@ -84,14 +91,13 @@ def determinar_factorial(numero)->int:
 
     return total
 
-print("Factorial de 3: ", determinar_factorial(5))
-
 def calcular_e(limite):
     n = 0
     e = 0
     while n < limite:
 	    e += 1/determinar_factorial(n)
 	    n = n + 1
-    print("El valor de e con 3 es: ",e)
+    print("e = ", e)
 
-calcular_e(3)
+print("Establece el limite para calcular 'e': ")
+calcular_e(int(input("limite: ")))
