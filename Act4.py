@@ -74,3 +74,24 @@ def signo_zodiacal(dia, mes):
         print("Mes no valido")
 
 signo_zodiacal(input("Dia: "),input("Mes: "))
+
+def determinar_factorial(numero)->int:
+    total = 1
+    i = numero
+    while i > 0:
+        total *= i
+        i = i-1
+
+    return total
+
+print("Factorial de 3: ", determinar_factorial(5))
+
+def calcular_e(limite):
+    n = 0
+    e = 0
+    while n < limite:
+	    e += 1/determinar_factorial(n)
+	    n = n + 1
+    print("El valor de e con 3 es: ",e)
+
+calcular_e(3)
