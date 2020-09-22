@@ -8,7 +8,6 @@ def area_triangulo(base:float, altura:float)->float:
 def area_circulo(radio:float)->float:
     return (radio*radio)*3.1416
 
-print("Hola mundo!")
 
 print("Area del cuadrado: ", area_cuadrado(int(input("valor del lado: "))))
 
